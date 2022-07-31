@@ -340,7 +340,7 @@ article h1 {
 .grid-container {
 	display: grid;
 	grid-template: repeat(3, 1fr) / repeat(3, max(250px, 20%));
-	gap: 12px;
+	gap: 15px;
 	margin-top: 20px;
 }
 
@@ -355,6 +355,14 @@ article h1 {
 	border-left: 8px solid var(--card-border);
 	border-radius: 5px;
 	box-shadow: 1px 1px 1px 1px rgb(226, 226, 226);
+}
+
+.container:hover {
+	box-shadow: 1px 1px 1px 1px #000f18;
+	background-color: #000f18;
+	color: white;
+	transition: 0.5s;
+	cursor: pointer;
 }
 
 .container p {
