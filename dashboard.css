@@ -132,7 +132,7 @@ table {
 	--nav-bg-button: #0284c7;
 	--text-color-one: #fff;
 	--text-color-two: #000;
-	--card-border: #facc15;
+	--card-border: #ffcc02;
 }
 
 html {
@@ -141,8 +141,296 @@ html {
 
 body {
 	box-sizing: border-box;
+	display: flex;
+	font-family: "Poppins", sans-serif;
+}
+
+.btn {
+	background-color: var(--nav-bg-button);
+	color: var(--text-color-one);
+	border: none;
+	border-radius: 5px;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+}
+
+img {
+	border-radius: 50%;
 }
 
 /**** NAV BAR STYLING ****/
 
+nav {
+	background-color: var(--nav-bg-button);
+	width: 20%;
+	position: fixed;
+	height: 100vh;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 10px;
+	padding-left: 20px;
+}
+
+nav .active {
+	padding-left: 20px;
+	background-color: #034a70;
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+nav .active:hover {
+	padding-left: 20px;
+	background-color: #034a70;
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+
+nav a:hover {
+	background-color: #034a70;
+	padding: 5px;
+	transition: 0.5s;
+}
+
+nav a h3 {
+	font-size: 1.6rem;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin: 10px 0 50px 15px;
+}
+
+.logo h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	color: white;
+}
+.pages,
+.extras {
+	margin-bottom: 50px;
+}
+
 /**** MAIN STYLING ****/
+
+main {
+	width: 80%;
+	position: relative;
+	left: 20%;
+}
+
+header {
+	height: 20vh;
+	box-shadow: 3px 3px 3px 0 gray;
+}
+
+.search-notification {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px;
+}
+
+.searchbar {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+	width: 40%;
+}
+
+input {
+	width: 400px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: rgb(182, 181, 181);
+	border: none;
+}
+
+input:focus {
+	outline: none;
+	border: 2px solid var(--nav-bg-button);
+}
+
+.notification-bar {
+	display: flex;
+	gap: 15px;
+	width: 60%;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.notification-bar img {
+	width: 30px;
+	height: 30px;
+}
+
+.profile-name {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.profile-links {
+	display: flex;
+	margin: 20px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.profile img {
+	width: 50px;
+	height: 50px;
+}
+
+.greeting-name {
+	display: grid;
+	gap: 10px;
+}
+
+.greeting-name .greeting {
+	font-size: 1.8rem;
+}
+
+.greeting-name .profile-handle {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.new,
+.upload {
+	margin-right: 10px;
+}
+
+section {
+	display: flex;
+	gap: 5px;
+	background-color: rgb(230, 238, 252);
+}
+
+article {
+	width: 80%;
+	margin: 30px 0 40px 20px;
+}
+
+article h1 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.grid-container {
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, max(250px, 20%));
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.grid-container h4 {
+	font-size: 1.6rem;
+	font-weight: 500;
+	padding: 10px;
+}
+
+.container {
+	background-color: var(--text-color-one);
+	border-left: 8px solid var(--card-border);
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px 1px rgb(226, 226, 226);
+}
+
+.container p {
+	font-size: 1.4rem;
+	padding: 0 10px 20px 10px;
+}
+
+.grid-icons {
+	padding: 10px;
+	position: relative;
+	left: 50%;
+}
+
+.grid-icons svg {
+	padding-right: 8px;
+	cursor: pointer;
+}
+
+aside {
+	width: 20%;
+	margin: 30px 20px 40px 0;
+}
+
+aside h2 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.messages {
+	background-color: var(--text-color-one);
+	box-shadow: 1px 1px 1px 1px rgb(226, 226, 226);
+	border-radius: 5px;
+}
+
+.messages {
+	margin-top: 20px;
+	margin-bottom: 31px;
+}
+
+.messages h4 {
+	font-size: 1.4rem;
+	font-weight: 500;
+	padding: 5px;
+}
+
+.messages p {
+	font-size: 1.2rem;
+	padding: 5px;
+}
+
+.messages hr {
+	width: 90%;
+}
+
+.topics {
+	margin-top: 20px;
+	background-color: var(--text-color-one);
+	padding: 20px 20px 20px 10px;
+	box-shadow: 1px 1px 1px 1px rgb(226, 226, 226);
+	border-radius: 5px;
+}
+
+.topics img {
+	width: 40px;
+	height: 40px;
+}
+
+.trending-profile {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 10px;
+	align-items: center;
+}
+
+.trending-name {
+	display: grid;
+	gap: 5px;
+}
+
+.trending-topic {
+	font-size: 1.4rem;
+}
+
+.profile-handle {
+	font-size: 1.2rem;
+	font-weight: 500;
+}
