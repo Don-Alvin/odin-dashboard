@@ -325,6 +325,7 @@ input:focus {
 section {
 	display: flex;
 	background-color: rgb(230, 238, 252);
+	gap: 10px;
 }
 
 article {
